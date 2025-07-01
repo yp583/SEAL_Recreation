@@ -1,0 +1,35 @@
+checkpoint_dir: ./checkpoints
+data_config:
+  dataset_name: squad
+  max_samples: 3
+device: auto
+domain: knowledge_incorporation
+eval_frequency: 10
+eval_samples: 100
+generation_max_length: 512
+generation_temperature: 1.0
+generation_top_k: 50
+generation_top_p: 0.95
+learning_rate: 0.0001
+log_file: null
+log_level: DEBUG
+lora_alpha: 8
+lora_dropout: 0.1
+lora_r: 4
+lora_target_modules: null
+max_checkpoints: 5
+max_outer_iterations: 5
+model_cache_dir: null
+model_name: microsoft/DialoGPT-small
+preprocessing_config: {}
+restem_batch_size: 4
+restem_max_grad_norm: 1.0
+restem_num_epochs: 1
+restem_warmup_steps: 100
+reward_threshold: 0.0
+samples_per_iteration: 2
+save_frequency: 100
+seed: 42
+torch_dtype: auto
+wandb_entity: null
+wandb_project: null

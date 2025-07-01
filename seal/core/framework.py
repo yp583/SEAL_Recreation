@@ -16,6 +16,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from .self_edit import SelfEditGenerator
 from .restem import ReSTEMOptimizer
 from ..models.lora_wrapper import LoRAWrapper
+from ..utils.config import SEALConfig as UtilsSEALConfig
 
 
 @dataclass
@@ -44,7 +45,7 @@ class SEALFramework:
     
     def __init__(
         self,
-        config: SEALConfig,
+        config: Union[SEALConfig, UtilsSEALConfig],
         domain: Any,  # Domain-specific implementation
         logger: Optional[logging.Logger] = None
     ):
@@ -135,7 +136,7 @@ class SEALFramework:
             
             # Update model using ReSTEM - Line 8 in Algorithm 1
             update_info = self.optimizer.update(
-                self_edits, rewards, context, self.config.reward_threshold
+                self_edits, rewards, [context] * len(self_edits), self.config.reward_threshold
             )
             
             # Log iteration results

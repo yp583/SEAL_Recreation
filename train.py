@@ -18,7 +18,7 @@ import torch
 sys.path.append(str(Path(__file__).parent))
 
 from seal import SEALFramework
-from seal.core.framework import SEALConfig
+from seal.utils.config import SEALConfig
 from seal.domains.knowledge_incorporation import KnowledgeIncorporationDomain
 from seal.domains.few_shot_learning import FewShotLearningDomain
 from seal.models.lora_wrapper import LoRAWrapper

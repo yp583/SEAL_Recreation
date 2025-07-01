@@ -308,7 +308,7 @@ class SEALMetrics:
             )
             
         if question_counts:
-            metrics["avg_questions_per_task"] = torch.tensor(question_counts).mean().item()
+            metrics["avg_questions_per_task"] = torch.tensor(question_counts, dtype=torch.float32).mean().item()
             
         return metrics
     
