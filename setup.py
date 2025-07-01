@@ -1,0 +1,38 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="seal",
+    version="0.1.0",
+    description="Self-Adapting LLMs (SEAL) - A framework for language models to improve themselves",
+    author="SEAL Implementation",
+    packages=find_packages(),
+    python_requires=">=3.8",
+    install_requires=[
+        "torch>=2.0.0",
+        "transformers>=4.30.0",
+        "peft>=0.4.0",
+        "datasets>=2.10.0",
+        "accelerate>=0.20.0",
+        "wandb>=0.15.0",
+        "numpy>=1.21.0",
+        "scipy>=1.7.0",
+        "scikit-learn>=1.0.0",
+        "matplotlib>=3.5.0",
+        "seaborn>=0.11.0",
+        "tqdm>=4.60.0",
+        "pyyaml>=6.0",
+        "tensorboard>=2.10.0",
+        "evaluate>=0.4.0",
+        "rouge-score>=0.1.2",
+    ],
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+    ],
+)
