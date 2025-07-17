@@ -1,6 +1,8 @@
+# Exclaimer: This is not my research, simply my own recreation of MIT CSAIL Paper framework called SEAL
+
 # SEAL: Self-Adapting LLMs
 
-A PyTorch implementation of **Self-Adapting LLMs (SEAL)**, a framework that enables language models to improve themselves by generating their own synthetic data and optimization parameters ("self-edits") in response to new data.
+A PyTorch implementation of **Self-Adapting LLMs (SEAL)**, a framework that enables language models to improve themselves by generating their own synthetic data and optimization parameters ("self-edits") in response to new data. 
 
 ## Overview
 
